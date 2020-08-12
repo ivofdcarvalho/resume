@@ -1,7 +1,7 @@
-var slideIndex = 0;
-var paused = false;
-var slides = document.getElementsByClassName("slide card");
-var dots = document.getElementsByClassName("slide dot");
+let slideIndex = 0;
+let paused = false;
+let slides = document.getElementsByClassName("slide-card");
+let dots = document.getElementsByClassName("slide-dot");
 
 function protectIndex() {
     if (slideIndex > slides.length) {slideIndex = 1}
