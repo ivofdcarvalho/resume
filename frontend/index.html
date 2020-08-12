@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="javascript/index.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Resume Ivo Carvalho</title>
+    </head>
+    <body onload="autoSlide()">
+        <header role="banner">
+            <div class="download-button">
+                <a href="src/[ENG-CV] Ivo Carvalho.pdf" target="_blank" data-type="document">
+                    <span>DOWNLOAD MY FULL RESUME</span>
+                </a>
+            </div>
+        </header>
+        <main role="main">
+            <div class="background-image" id="first-image">
+                <div class="main-block" id="intro">
+                    <div>
+                        <h1 id="name">Ivo Carvalho</h1>
+                        <h2 id="title">Software Developer</h2>
+                    </div>
+                </div>
+                <div id="profileContainer"><img id="profilePicture" src="src/Profile.jpg" alt="profile"></div>
+                <div class="main-block" id="info">
+                    <div class="slideshow-container">
+                        <div class="slide card">
+                            <h3 class="slideTitle">About Me</h3>
+                            <span class="textContent"></span>
+                        </div>
+
+                        <div class="slide card">
+                            <h3 class="slideTitle">Experience</h3>
+                            <span class="textContent"></span>
+                        </div>
+
+                        <div class="slide card">
+                            <h3 class="slideTitle">Education</h3>
+                            <span class="textContent"></span>
+                        </div>
+                    </div>
+
+                    <a class="prev" onclick="control(-1)">&#10094;</a>
+                    <a class="next" onclick="control(1)">&#10095;</a>
+
+                    <div class="dots">
+                        <span class="slide dot" onclick="navigate(1)"></span>
+                        <span class="slide dot" onclick="navigate(2)"></span>
+                        <span class="slide dot" onclick="navigate(3)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="background-image"  id="second-image">
+                <div class="main-block" id="skills">
+
+                </div>
+                <div class="main-block" id="contact">
+
+                </div>
+            </div>
+        </main>
+        <footer role="contentinfo">
+
+        </footer>
+    </body>
+</html>
