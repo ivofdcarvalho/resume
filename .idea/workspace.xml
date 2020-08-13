@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a84b00d-2554-402b-912b-6e15605dad1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/resume.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/resume.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/[ENG-CV] Ivo Carvalho.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/[ENG-CV] Ivo Carvalho.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/style/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597236955269</updated>
-      <workItem from="1597236957842" duration="47822000" />
+      <workItem from="1597236957842" duration="52985000" />
     </task>
     <task id="LOCAL-00001" summary="Starting frontend;">
       <created>1597260057683</created>
@@ -98,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597264680311</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Skills, finished About Me, Added links">
+      <created>1597343421414</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597343421414</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +125,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting frontend;" />
     <MESSAGE value="Added about me;&#10;Changed view for Info;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added about me;&#10;Changed view for Info;" />
+    <MESSAGE value="Added Skills, finished About Me, Added links" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Skills, finished About Me, Added links" />
   </component>
   <component name="WindowStateProjectService">
     <state x="393" y="177" key="Vcs.Push.Dialog.v2" timestamp="1597264685516">

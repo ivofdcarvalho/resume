@@ -13,7 +13,6 @@ main{
 }
 
 .background-image{
-    height: 1200px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,4 +287,83 @@ h6{
 
 #skills h5{
     color: #DF3143;
+}
+
+#contact{
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+
+#contact h3{
+    margin-block-start: 75px;
+}
+
+#contact .line{
+    margin-bottom: 50px;
+}
+
+.contact-details{
+    background-color: #2E4975;
+    width: 50%;
+    height: inherit;
+}
+
+.contact-details-container{
+    margin-left: calc(100% - (100% / 1.5));
+    color: whitesmoke;
+}
+
+.contact-me-container{
+    margin-left: 50px;
+    width: calc((100% * 2) - (100% - (100% / 1.5)));
+}
+
+.paragraph-line b{
+    width: 20%;
+    float: left;
+}
+
+form{
+    width: 400px;
+}
+
+form input{
+    height: 40px;
+    margin: 0 0 5px 0;
+    box-sizing:border-box
+}
+
+.form-group-1{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group-1 input{
+    width: 50%;
+}
+
+#nameInput{
+    margin: 0 5px 5px 0;
+}
+
+.form-group-2 input{
+    width: 100%;
+}
+
+.form-group-3 textarea{
+    width: 100%;
+    resize: none;
+    box-sizing:border-box
+}
+
+footer p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 12px;
+}
+
+::placeholder{
+    font-family: sans-serif;
+    font-size: 14px;
 }
