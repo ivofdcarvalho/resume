@@ -50,9 +50,40 @@ h3{
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 38px;
-    color: black;
     margin: 0 0 25px;
     padding: 0;
+}
+
+h4{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h6{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #94A3BA;
+}
+
+.shortcuts{
+    position: fixed;
+    top: 30px;
+    left: 60px;
+    font-size: 36px;
+    z-index: 5;
+    color: #94A3BA;
+}
+
+.shortcuts a{
+    margin-right: 10px;
 }
 
 /* Download button always visible */
@@ -111,6 +142,7 @@ h3{
 }
 
 #skills{
+    height: 700px;
 }
 
 #contact{
@@ -118,18 +150,40 @@ h3{
     background: #BBC8DD;
 }
 
-/* ---- Carousel ---- */
-.slideshow-container{
+.section-container{
     position: relative;
+    width: calc(100% / 1.5);
+    height: inherit;
+    margin-left: calc((100% - (100% / 1.5))/2);
+    text-align: justify;
 }
+/* ---- Carousel ---- */
 /* Hide the elements by default */
 .slide-card {
+    top: 200px;
+    width: 100%;
     display: none;
     position: absolute;
-    top: 200px;
-    width: 890px;
-    margin-left: calc((100% - 890px)/2);
-    text-align: left;
+    z-index: 3;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+.text-content{
+    height: 270px;
+    font-size: 17px;
+    line-height:1.4em;
+    display: flex;
+    overflow: auto;
+}
+
+.text-section{
+    flex-basis: 100%;
+    min-width: 200px;
+    height: inherit;
+    margin: 0 30px 0 0;
 }
 
 .line{
@@ -139,9 +193,8 @@ h3{
     margin-bottom: 100px;
 }
 
-.text-content{
-    font-size: 20px;
-    line-height:1.4em;
+.text-content p{
+    margin-block-end: 0;
 }
 
 /* Next & previous buttons */
@@ -167,8 +220,6 @@ h3{
 .next {
     right: 25px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: black;
 }
@@ -195,21 +246,46 @@ h3{
 
 .active, .slide-dot:hover {
     background-color: whitesmoke;
-    border: 2px solid #94A3BA;
 }
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
+
 @-webkit-keyframes fade {
-     from {opacity: .4}
+     from {opacity: 0}
      to {opacity: 1}
  }
 
 @keyframes fade {
-    from {opacity: .4}
+    from {opacity: 0}
     to {opacity: 1}
+}
+
+#skills h3{
+    margin-block-start: 100px;
+    color: whitesmoke;
+}
+
+#skills .line{
+    border-top:5px solid whitesmoke;
+}
+
+.skill-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 500px;
+}
+
+.skill-section{
+    margin: 5px;
+    width: 125px;
+    height: 125px;
+    background-color: #EDEFF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#skills h5{
+    color: #DF3143;
 }
