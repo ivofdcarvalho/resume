@@ -6,6 +6,8 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ${ROOT}/webpage:/var/www
+      - ${ROOT}/Config/nginx/logs:/var/log/nginx
       - ${ROOT}/Config/nginx/conf.d/:/etc/nginx/conf.d

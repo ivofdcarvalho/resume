@@ -29,11 +29,13 @@ It uses **JavaScript** to create the carousel made in **HTML** (it intentionally
 The **BackEnd** consist of **PHP** code to send an email with the data filled on the **FrontEnd** form and **Python** code to communicate with the **Database** and provide the data for the **FrontEnd**. The intent is to provide a dynamic project where the data is easy to update.
 
 ## Database
-##### This section will be implemented with **SQL** 
+##### This section will be implemented with SQL 
 
 As a personal preference the **Database** will be implemented using **MySQL**. The diagram can be consulted in the corresponding folder.
 
 ## Docker
-##### This section will be implemented with **Docker** (duh!)
+##### This section will be implemented with Docker (duh!) and Nginx
 
-This project will be converted to Docker in order to be easy to deploy it without having to worry about the dependencies and environment. To use the project change the '.env copy' file to '.env' and make the necessary changes to your usecase.
+This project will be converted to Docker in order to be easy to deploy it without having to worry about the dependencies and environment. 
+Its using Nginx to self host the webpage. 
+To use the project change the '.env copy' file to '.env' and make the necessary changes to your use case.
