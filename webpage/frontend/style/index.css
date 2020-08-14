@@ -1,0 +1,441 @@
+/* ---------------- MAIN ---------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* CONTENT */
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.background-image {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#first-image {
+    background-image: url("../src/firstBackground.jpg");
+}
+
+#second-image {
+    background-image: url("../src/secondBackground.jpg");
+}
+
+/* ---------------- DEFAULT STYLE ---------------- */
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+h1 {
+    font-size: 80px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #94A3BA;
+    margin-top: 10px;
+    padding: 0;
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 38px;
+    margin: 0 0 25px;
+    padding: 0;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h6 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #94A3BA;
+}
+
+/* ---------------- LEFT TOP CORNER ---------------- */
+.shortcuts {
+    position: fixed;
+    top: 30px;
+    left: 60px;
+    font-size: 36px;
+    z-index: 5;
+    color: #94A3BA;
+}
+
+.shortcuts a {
+    margin-right: 10px;
+}
+
+/* ---------------- RIGHT TOP CORNER ---------------- */
+.download-button {
+    position: fixed;
+    font-size: 13px;
+    border: 1px solid #94A3BA;
+    padding: 10px 50px 10px 50px;
+    top: 30px;
+    right: 60px;
+    text-decoration: none; /* no underline */
+    color: #94A3BA;
+    z-index: 5;
+}
+
+.download-button:hover {
+    border: 1px solid red;
+    color: red;
+    background: whitesmoke;
+}
+
+/* ---------------- PROFILE PICTURE ---------------- */
+#profileContainer {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
+#profilePicture {
+    border-radius: 50%;
+    width: 248px;
+    height: 248px;
+    border: 10px solid #EDEFF5;
+}
+
+/* ---------------- MAIN BLOCKS PAGE ---------------- */
+.main-block {
+    height: 700px;
+    position: relative;
+}
+
+#intro {
+    height: 500px;
+}
+
+#info {
+    background: #EDEFF5;
+}
+
+#skills {
+    height: 700px;
+}
+
+#contact {
+    height: 500px;
+    background: #BBC8DD;
+}
+
+
+/* ---------------- MAIN BLOCKS - CONTAINERS ---------------- */
+#intro div {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;
+}
+
+.section-container {
+    position: relative;
+    width: calc(100% / 1.5);
+    height: inherit;
+    margin-left: calc((100% - (100% / 1.5)) / 2);
+    text-align: justify;
+}
+
+/* ---------------- ABOUT ME - CAROUSEL ---------------- */
+.slide-card {
+    top: 200px;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 5px 35px;
+    font-weight: bold;
+    font-size: 18px;
+    color: whitesmoke;
+    transition: 0.6s ease;
+    border-radius: 2px 2px;
+    user-select: none;
+    background-color: #94A3BA;
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.prev:hover, .next:hover {
+    background-color: black;
+}
+
+.dots {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+}
+
+.slide-dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #94A3BA;
+    border: 2px solid #94A3BA;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .slide-dot:hover {
+    background-color: whitesmoke;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* ---------------- CAROUSEL - CONTENT ---------------- */
+.text-content {
+    height: 270px;
+    font-size: 17px;
+    line-height: 1.4em;
+    display: flex;
+    overflow: auto;
+}
+
+.text-section {
+    flex-basis: 100%;
+    min-width: 200px;
+    height: inherit;
+    margin: 0 30px 0 0;
+}
+
+.line {
+    height: 1px;
+    width: 50px;
+    border-top: 5px solid #DF3143;
+    margin-bottom: 100px;
+}
+
+.text-content p {
+    margin-block-end: 0;
+}
+
+/* ---------------- SKILLS ---------------- */
+#skills h3 {
+    margin-block-start: 100px;
+    color: whitesmoke;
+}
+
+#skills .line {
+    border-top: 5px solid whitesmoke;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 470px;
+}
+
+.skill-section {
+    margin: 5px;
+    width: 125px;
+    height: 125px;
+    background-color: #EDEFF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#skills h5 {
+    color: #DF3143;
+}
+
+#skills .footer {
+    position: absolute;
+    bottom: 5px;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+/* ---------------- CONTACT INFO ---------------- */
+#contact {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+
+#contact h3 {
+    margin-block-start: 75px;
+}
+
+#contact .line {
+    margin-bottom: 50px;
+}
+
+.contact-details {
+    background-color: #2E4975;
+    width: 50%;
+    height: inherit;
+}
+
+.contact-details-container {
+    margin-left: calc(100% - (100% / 1.5));
+    color: whitesmoke;
+}
+
+.paragraph-line b {
+    width: 20%;
+    float: left;
+}
+
+/* ---------------- CONTACT ME - FORM ---------------- */
+.contact-me {
+    overflow: hidden;
+    width: 50%;
+    height: inherit;
+}
+
+.contact-me-container {
+    margin-left: 50px;
+    width: calc((100% - 50px) - (100% - (100% / 1.5)));
+}
+
+.form-group-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group-1 input {
+    width: 50%;
+}
+
+.form-group-2 input {
+    width: 100%;
+}
+
+.form-group-3 textarea {
+    width: 100%;
+    resize: none;
+}
+
+.form-group-4 {
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    height: 40px;
+    margin: 0 0 5px 0;
+}
+
+form input, textarea {
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-left: 10px;
+    background-color: #BBC8DD;
+    border-width: 1px;
+    border-radius: 0;
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    box-sizing: border-box
+}
+
+form input:hover, textarea:hover {
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    background-color: white;
+}
+
+form input:focus, textarea:focus {
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    background-color: #DDE4EE;
+}
+
+form button {
+    margin-top: 15px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+form button:hover {
+    color: #DDE4EE;
+}
+
+#form-name {
+    margin: 0 20px 5px 0;
+}
+
+footer p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 12px;
+}
