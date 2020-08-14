@@ -1,0 +1,11 @@
+version: '3'
+services:
+  webserver:
+    container_name: webserver
+    image: nginx:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ${ROOT}/webpage:/var/www
+      - ${ROOT}/Config/nginx/conf.d/:/etc/nginx/conf.d

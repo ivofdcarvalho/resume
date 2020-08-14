@@ -5,6 +5,7 @@
     <script src="javascript/index.js"></script>
     <head>
         <meta charset="UTF-8">
+        <link rel="icon" href="src/htmlicon.png">
         <title>Resume Ivo Carvalho</title>
     </head>
     <body onload="autoSlide()">
@@ -27,7 +28,7 @@
                         <h2 id="title">Software Developer</h2>
                     </div>
                 </div>
-                <div id="profileContainer"><img id="profilePicture" src="src/Profile.jpg" alt="profile"></div>
+                <div id="profileContainer"><img id="profilePicture" src="src/profile.jpg" alt="profile"></div>
                 <div class="main-block" id="info">
                     <div class="section-container">
                         <div class="slide-card">
@@ -244,10 +245,6 @@
                             <h3 class="slide-title">Contact Details</h3>
                             <div class="line"></div>
                             <p class="paragraph-line">
-                                <b>Website</b>
-                                <span>www.ivofdcarvalho.pt.vu</span>
-                            </p>
-                            <p class="paragraph-line">
                                 <b>Skype</b>
                                 <span>live:ivofdcarvalho_1</span>
                             </p>
@@ -261,7 +258,7 @@
                             </p>
                             <p class="paragraph-line">
                                 <b>Address</b>
-                                <span>Urbanização Loreto, Lote 3, 1ºC, Coimbra</span>
+                                <span>Coimbra, Portugal</span>
                             </p>
                         </div>
                     </div>
@@ -269,19 +266,19 @@
                         <div class="contact-me-container">
                             <h3 class="slide-title">Contact Me</h3>
                             <div class="line"></div>
-                            <form id="reused_form">
+                            <form>
                                 <div class="form-group-1">
-                                    <input id="nameInput" type="text" name="name" class="form-control" placeholder="Name">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                    <input id="form-name" type="text" placeholder="Name" required>
+                                    <input id="form-email" type="email" placeholder="Email" required>
                                 </div>
                                 <div class="form-group-2">
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                    <input id="form-subject" type="text" placeholder="Subject" required>
                                 </div>
                                 <div class="form-group-3">
-                                    <textarea rows="5" name="message" class="form-control" placeholder="Message"></textarea>
+                                    <textarea id="form-message" placeholder="Message" rows="5" required></textarea>
                                 </div>
                                 <div class="form-group-4">
-                                    <button class="btn btn-raised btn-block btn-danger">Submit</button>
+                                    <button id="form-submit">Submit</button>
                                 </div>
                             </form>
                         </div>
