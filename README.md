@@ -1,7 +1,7 @@
 # Resume Project
 
 This project aims to develop my skills as a developer by forcing me to use technologies that I don't usually practice. At the same time, this project also serves to create a curriculum page to present to anyone who might be interested.
-The following technologies will be used:test
+The following technologies will be used:
 
  - **HTML**
  - **CSS**
