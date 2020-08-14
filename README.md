@@ -15,7 +15,7 @@ Implemented so far:
  - [x] **FrontEnd**
  - [ ] **BackEnd**
  - [ ] **Database**
- - [ ] **Docker**
+ - [x] **Docker**
 
 ## FrontEnd
 ##### This section will be implemented with HTML, CSS and  JavaScript.
@@ -36,4 +36,4 @@ As a personal preference the **Database** will be implemented using **MySQL**. T
 ## Docker
 ##### This section will be implemented with **Docker** (duh!)
 
-This project will be converted to Docker in order to be easy to deploy it without having to worry about the dependencies and environment.
+This project will be converted to Docker in order to be easy to deploy it without having to worry about the dependencies and environment. To use the project change the '.env copy' file to '.env' and make the necessary changes to your usecase.
