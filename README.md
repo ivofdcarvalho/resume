@@ -36,6 +36,6 @@ As a personal preference the **Database** will be implemented using **MySQL**. T
 ## Docker
 ##### This section will be implemented with Docker (duh!) and Nginx
 
-This project will be converted to Docker in order to be easy to deploy it without having to worry about the dependencies and environment. 
-Its using Nginx to self host the webpage. 
+This project will be converted to **Docker** in order to be easy to deploy it without having to worry about the dependencies and environment. 
+Its using **Nginx** to self host the webpage. 
 To use the project change the '.env copy' file to '.env' and make the necessary changes to your use case.
