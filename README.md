@@ -12,7 +12,7 @@ The following technologies will be used:
  - **Docker**
  
 Implemented so far:
- - [x] **FrontEnd**
+ - [x] **FrontEnd** (Missing form function [PHP - Backend])
  - [ ] **BackEnd**
  - [ ] **Database**
  - [x] **Docker**
