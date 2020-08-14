@@ -10,6 +10,7 @@ The following technologies will be used:
  - **Python**
  - **SQL**
  - **Docker**
+ - **Nginx**
  
 Implemented so far:
  - [x] **FrontEnd** (Missing form function [PHP - Backend])
