@@ -4,8 +4,12 @@ let slides = document.getElementsByClassName("slide-card");
 let dots = document.getElementsByClassName("slide-dot");
 
 function protectIndex() {
-    if (slideIndex > slides.length) {slideIndex = 1}
-    if (slideIndex < 1) {slideIndex = slides.length}
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    if (slideIndex < 1) {
+        slideIndex = slides.length
+    }
 }
 
 // Next/previous controls
@@ -25,7 +29,7 @@ function navigate(n) {
 }
 
 function autoSlide() {
-    if(!paused){
+    if (!paused) {
         slideIndex++;
 
         protectIndex()
@@ -35,12 +39,12 @@ function autoSlide() {
 }
 
 function showSlides() {
-     // Hide everything and change style for all the dots
-    for (let i=0; i<slides.length; i++) {
+    // Hide everything and change style for all the dots
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         dots[i].className = dots[i].className.replace(" active", "");
     }
     // Show selected and change style for the corresponding dot
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
