@@ -314,18 +314,20 @@ h6{
     color: whitesmoke;
 }
 
+.contact-me{
+    overflow: hidden;
+    width: 50%;
+    height: inherit;
+}
+
 .contact-me-container{
     margin-left: 50px;
-    width: calc((100% * 2) - (100% - (100% / 1.5)));
+    width: calc((100% - 50px) - (100% - (100% / 1.5)));
 }
 
 .paragraph-line b{
     width: 20%;
     float: left;
-}
-
-form{
-    width: 400px;
 }
 
 form input{
