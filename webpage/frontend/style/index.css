@@ -1,8 +1,18 @@
+:root {
+    --standart-color: black;
+    --color-1: #EFEBEA;
+    --color-2: #008DAA;
+    --contrast-color-3: white;
+    --menu-split-color: #d5d1ca;
+    --underline-color: #C70039;
+}
+
 /* ---------------- MAIN ---------------- */
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    color: var(--standart-color);
 }
 
 /* CONTENT */
@@ -11,6 +21,122 @@ main {
     flex-direction: column;
     margin: auto;
     text-align: center;
+}
+
+/* PAGE AND MENU */
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-1);
+    overflow: hidden;
+    border-right: 1px solid var(--menu-split-color);
+}
+
+.top-menu {
+    width: 100%;
+    height: 300px;
+}
+
+.menu .links {
+    width: 100%;
+    height: calc(100% - 300px);
+}
+
+.menu-image {
+    height: calc(100% / 2);
+    background-image: url("../src/firstBackground.jpg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+}
+
+.shortcuts {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    padding-top: 10px;
+    font-size: 36px;
+    color: var(--contrast-color-3);
+}
+
+.shortcuts :first-child {
+    margin-right: 165px;
+}
+
+#profileContainer {
+    margin-top: calc(-100% / 3);
+}
+
+#profilePicture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 10px solid var(--color-1);
+}
+
+.menu h1 {
+    color: var(--standart-color);
+    font-size: 32px;
+}
+
+.menu .links .link {
+    width: 100%;
+    height: calc(100% / 4);
+    border-top: 1px solid var(--menu-split-color);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 24px;
+}
+
+.menu .links a {
+    width: calc(100% - 10px);
+    height: 50%;
+    margin-left: 2px;
+    align-items: center;
+    display: flex;
+    border-left: 5px;
+}
+
+.menu .links a:hover {
+    color: var(--color-2);
+}
+
+.menu .links a div {
+    margin-right: 10px;
+    width: 5px;
+    height: 0;
+    background: var(--color-2);
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+
+.menu .links a:hover > div {
+    height: 100%;
+    background: var(--color-2);
+}
+
+.menu .links i {
+    margin-right: 20px;
+}
+
+.page-body {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .background-image {
@@ -36,7 +162,7 @@ a {
 
 h1 {
     font-size: 80px;
-    color: #FFFFFF;
+    color: var(--contrast-color-3);
     margin: 0;
     padding: 0;
 }
@@ -44,7 +170,7 @@ h1 {
 h2 {
     text-transform: uppercase;
     font-size: 25px;
-    color: #94A3BA;
+    color: var(--color-2);
     margin-top: 10px;
     padding: 0;
 }
@@ -73,56 +199,26 @@ h6 {
     font-size: 14px;
     margin: 0;
     padding: 0;
-    color: #94A3BA;
-}
-
-/* ---------------- LEFT TOP CORNER ---------------- */
-.shortcuts {
-    position: fixed;
-    top: 30px;
-    left: 60px;
-    font-size: 36px;
-    z-index: 5;
-    color: #94A3BA;
-}
-
-.shortcuts a {
-    margin-right: 10px;
+    color: var(--color-2);
 }
 
 /* ---------------- RIGHT TOP CORNER ---------------- */
 .download-button {
     position: fixed;
     font-size: 13px;
-    border: 1px solid #94A3BA;
+    border: 1px solid var(--color-2);
     padding: 10px 50px 10px 50px;
     top: 30px;
     right: 60px;
     text-decoration: none; /* no underline */
-    color: #94A3BA;
+    color: var(--color-2);
     z-index: 5;
 }
 
 .download-button:hover {
     border: 1px solid red;
     color: red;
-    background: whitesmoke;
-}
-
-/* ---------------- PROFILE PICTURE ---------------- */
-#profileContainer {
-    position: absolute;
-    top: 400px;
-    left: 0;
-    right: 0;
-    z-index: 4;
-}
-
-#profilePicture {
-    border-radius: 50%;
-    width: 248px;
-    height: 248px;
-    border: 10px solid #EDEFF5;
+    background: var(--contrast-color-3);
 }
 
 /* ---------------- MAIN BLOCKS PAGE ---------------- */
@@ -136,7 +232,7 @@ h6 {
 }
 
 #info {
-    background: #EDEFF5;
+    background: var(--color-1);
 }
 
 #skills {
@@ -145,7 +241,7 @@ h6 {
 
 #contact {
     height: 500px;
-    background: #BBC8DD;
+    background: var(--color-1);
 }
 
 
@@ -186,11 +282,11 @@ h6 {
     padding: 5px 35px;
     font-weight: bold;
     font-size: 18px;
-    color: whitesmoke;
+    color: var(--contrast-color-3);
     transition: 0.6s ease;
     border-radius: 2px 2px;
     user-select: none;
-    background-color: #94A3BA;
+    background-color: var(--color-2);
 }
 
 .prev {
@@ -217,15 +313,15 @@ h6 {
     height: 10px;
     width: 10px;
     margin: 0 2px;
-    background-color: #94A3BA;
-    border: 2px solid #94A3BA;
+    background-color: var(--color-2);
+    border: 2px solid var(--color-2);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .slide-dot:hover {
-    background-color: whitesmoke;
+    background-color: var(--contrast-color-3);
 }
 
 @-webkit-keyframes fade {
@@ -265,7 +361,7 @@ h6 {
 .line {
     height: 1px;
     width: 50px;
-    border-top: 5px solid #DF3143;
+    border-top: 5px solid var(--underline-color);
     margin-bottom: 100px;
 }
 
@@ -276,11 +372,11 @@ h6 {
 /* ---------------- SKILLS ---------------- */
 #skills h3 {
     margin-block-start: 100px;
-    color: whitesmoke;
+    color: var(--contrast-color-3);
 }
 
 #skills .line {
-    border-top: 5px solid whitesmoke;
+    border-top: 5px solid var(--contrast-color-3);
 }
 
 .skill-container {
@@ -295,7 +391,7 @@ h6 {
     margin: 5px;
     width: 125px;
     height: 125px;
-    background-color: #EDEFF5;
+    background-color: var(--color-1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,13 +399,13 @@ h6 {
 }
 
 #skills h5 {
-    color: #DF3143;
+    color: var(--underline-color);
 }
 
 #skills .footer {
     position: absolute;
     bottom: 5px;
-    color: whitesmoke;
+    color: var(--contrast-color-3);
     font-size: 14px;
 }
 
@@ -329,14 +425,14 @@ h6 {
 }
 
 .contact-details {
-    background-color: #2E4975;
+    background-color: var(--color-2);
     width: 50%;
     height: inherit;
 }
 
 .contact-details-container {
     margin-left: calc(100% - (100% / 1.5));
-    color: whitesmoke;
+    color: var(--contrast-color-3);
 }
 
 .paragraph-line b {
@@ -349,6 +445,7 @@ h6 {
     overflow: hidden;
     width: 50%;
     height: inherit;
+    background-color: var(--color-1);
 }
 
 .contact-me-container {
@@ -388,7 +485,7 @@ form input, textarea {
     font-family: sans-serif;
     font-size: 14px;
     padding-left: 10px;
-    background-color: #BBC8DD;
+    background-color: var(--color-1);
     border-width: 1px;
     border-radius: 0;
     outline: none;
@@ -403,14 +500,14 @@ form input:hover, textarea:hover {
     border-top-style: groove;
     border-right-style: groove;
     border-left-style: groove;
-    background-color: white;
+    background-color: var(--contrast-color-3);
 }
 
 form input:focus, textarea:focus {
     border-top-style: groove;
     border-right-style: groove;
     border-left-style: groove;
-    background-color: #DDE4EE;
+    background-color: var(--contrast-color-3);
 }
 
 form button {
@@ -423,11 +520,12 @@ form button {
     font-family: sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: var(--color-2);
 }
 
 form button:hover {
-    color: #DDE4EE;
+    color: var(--contrast-color-3);
+    text-shadow: -1px -1px 0 var(--color-2), 1px -1px 0 var(--color-2), -1px 1px 0 var(--color-2), 1px 1px 0 var(--color-2);
 }
 
 #form-name {
