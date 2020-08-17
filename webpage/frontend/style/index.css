@@ -1,4 +1,4 @@
-:root{
+:root {
     --standart-color: black;
     --color-1: #EFEBEA;
     --color-2: #008DAA;
@@ -6,6 +6,7 @@
     --menu-split-color: #d5d1ca;
     --underline-color: #C70039;
 }
+
 /* ---------------- MAIN ---------------- */
 body {
     margin: 0;
@@ -23,12 +24,12 @@ main {
 }
 
 /* PAGE AND MENU */
-.page{
+.page {
     display: flex;
     flex-direction: column;
 }
 
-.menu{
+.menu {
     width: 250px;
     height: 100%;
     position: fixed;
@@ -42,17 +43,17 @@ main {
     border-right: 1px solid var(--menu-split-color);
 }
 
-.top-menu{
+.top-menu {
     width: 100%;
     height: 300px;
 }
 
-.menu .links{
+.menu .links {
     width: 100%;
     height: calc(100% - 300px);
 }
 
-.menu-image{
+.menu-image {
     height: calc(100% / 2);
     background-image: url("../src/firstBackground.jpg");
     background-size: 250px;
@@ -85,14 +86,14 @@ main {
     border: 10px solid var(--color-1);
 }
 
-.menu h1{
+.menu h1 {
     color: var(--standart-color);
     font-size: 32px;
 }
 
-.menu .links .link{
+.menu .links .link {
     width: 100%;
-    height: calc(100%/ 4);
+    height: calc(100% / 4);
     border-top: 1px solid var(--menu-split-color);
     text-align: left;
     display: flex;
@@ -102,7 +103,7 @@ main {
     font-size: 24px;
 }
 
-.menu .links a{
+.menu .links a {
     width: calc(100% - 10px);
     height: 50%;
     margin-left: 2px;
@@ -111,11 +112,11 @@ main {
     border-left: 5px;
 }
 
-.menu .links a:hover{
+.menu .links a:hover {
     color: var(--color-2);
 }
 
-.menu .links a div{
+.menu .links a div {
     margin-right: 10px;
     width: 5px;
     height: 0;
@@ -123,16 +124,16 @@ main {
     transition: height 0.5s ease, background-color 0.5s ease;
 }
 
-.menu .links a:hover > div{
+.menu .links a:hover > div {
     height: 100%;
     background: var(--color-2);
 }
 
-.menu .links i{
+.menu .links i {
     margin-right: 20px;
 }
 
-.page-body{
+.page-body {
     margin-left: 250px;
     display: flex;
     flex-direction: column;
