@@ -32,10 +32,7 @@ if (isset($_POST['form-submit'])) {
         }
     }
 
-    // get to email from the page
-//    if (!isset($_POST['to-email'])){
-//        problem('There is a problem with the page email.');
-//    }
+    // TODO: This needs to be changed to get the value from the DB
     $to_email = "ivofdcarvalho@gmail.com";
 
     // validation expected data exists
