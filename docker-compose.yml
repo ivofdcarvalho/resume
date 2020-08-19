@@ -11,3 +11,17 @@ services:
       - ${ROOT}/webpage:/var/www
       - ${ROOT}/Config/nginx/logs:/var/log/nginx
       - ${ROOT}/Config/nginx/conf.d/:/etc/nginx/conf.d
+  php:
+    container_name: php
+    #image: php:7-fpm
+    build: ${ROOT}/Config/php
+    restart: unless-stopped
+    volumes:
+      - ${ROOT}/webpage:/var/www
+  mailhog:
+    container_name: mailhog
+    image: mailhog/mailhog
+    restart: unless-stopped
+    ports:
+      - 1025:1025
+      - 8025:8025
