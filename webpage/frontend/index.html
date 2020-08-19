@@ -330,19 +330,20 @@
                         <div class="contact-me-container">
                             <h3 class="slide-title">Contact Me</h3>
                             <div class="line"></div>
-                            <form>
+                            <form action="index.php" method="post">
+                                <span name="to-email" style="display: none">ivofdcarvalho@gmail.com</span>
                                 <div class="form-group-1">
-                                    <input id="form-name" placeholder="Name" required type="text">
-                                    <input id="form-email" placeholder="Email" required type="email">
+                                    <input id="form-name" name="form-name" placeholder="Name" required type="text">
+                                    <input id="form-email" name="form-email" placeholder="Email" required type="email">
                                 </div>
                                 <div class="form-group-2">
-                                    <input id="form-subject" placeholder="Subject" required type="text">
+                                    <input id="form-subject" name="form-subject" placeholder="Subject" required type="text">
                                 </div>
                                 <div class="form-group-3">
-                                    <textarea id="form-message" placeholder="Message" required rows="5"></textarea>
+                                    <textarea id="form-message" name="form-message" placeholder="Message" required rows="5"></textarea>
                                 </div>
                                 <div class="form-group-4">
-                                    <button id="form-submit">Submit</button>
+                                    <button id="form-submit" name="form-submit" type="submit">Submit</button>
                                 </div>
                             </form>
                         </div>

@@ -11,3 +11,9 @@ services:
       - ${ROOT}/webpage:/var/www
       - ${ROOT}/Config/nginx/logs:/var/log/nginx
       - ${ROOT}/Config/nginx/conf.d/:/etc/nginx/conf.d
+  php:
+    container_name: php
+    image: php:7-fpm
+    restart: unless-stopped
+    volumes:
+      - ${ROOT}/webpage:/var/www
