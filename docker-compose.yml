@@ -1,6 +1,6 @@
 version: '3'
 services:
-  webserver:
+  nginx:
     container_name: nginx
     image: nginx:latest
     restart: unless-stopped
