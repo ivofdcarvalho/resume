@@ -27,7 +27,7 @@ It uses **JavaScript** to create the carousel made in **HTML** (it intentionally
 ## BackEnd
 ##### This section will be implemented with Python and PHP.
 
-The **BackEnd** consist of **PHP** code to send an email with the data filled on the **FrontEnd** form and **Python** code to communicate with the **Database** and provide the data for the **FrontEnd**. The intent is to provide a dynamic project where the data is easy to update.\
+The **BackEnd** consist of **PHP** code to send an email with the data filled on the **FrontEnd** form and **Python** code to communicate with the **Database** and provide the data for the **FrontEnd**. The intent is to provide a dynamic project where the data is easy to update.
 
 ## Database
 ##### This section will be implemented with SQL 
