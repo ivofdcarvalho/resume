@@ -35,10 +35,10 @@ The **BackEnd** consist of **PHP** code to send an email with the data filled on
 As a personal preference the **Database** will be implemented using **MySQL**. The diagram can be consulted in the corresponding folder.
 
 ## Docker
-##### This section will be implemented with Docker (duh!) and Nginx
+##### This section will be implemented with Docker (duh!)
 
 This project will be converted to **Docker** in order to be easy to deploy it without having to worry about the dependencies and environment.\
-Its using **Nginx** to self host the webpage.\
 To use the project change the '.env copy' file to '.env' and make the necessary changes to your use case.\
-The image **MailHog** is being used to handle the emails and to configure it we need to access http://localhost:8025/  
+Its using **Nginx** to self host the webpage.\
+The image **MailHog** is being used to hold the emails. To view them we need to access http://localhost:8025/  
 For more detail on how to use **MailHog** consult this [URL](https://phauer.com/2017/test-mail-server-php-docker-container/).
