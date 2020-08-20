@@ -28,7 +28,6 @@ It uses **JavaScript** to create the carousel made in **HTML** (it intentionally
 ##### This section will be implemented with Python and PHP.
 
 The **BackEnd** consist of **PHP** code to send an email with the data filled on the **FrontEnd** form and **Python** code to communicate with the **Database** and provide the data for the **FrontEnd**. The intent is to provide a dynamic project where the data is easy to update.\
-Since the page uses a form to send an email through **PHP** there is a need to install a sendmail service in the **PHP** docker image (**MailHog** is used).
 
 ## Database
 ##### This section will be implemented with SQL 
