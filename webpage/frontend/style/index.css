@@ -263,7 +263,7 @@ h6 {
 
 /* ---------------- ABOUT ME - CAROUSEL ---------------- */
 .slide-card {
-    top: 200px;
+    top: 100px;
     width: 100%;
     display: none;
     position: absolute;
@@ -344,18 +344,21 @@ h6 {
 
 /* ---------------- CAROUSEL - CONTENT ---------------- */
 .text-content {
-    height: 270px;
+    height: 390px;
     font-size: 17px;
     line-height: 1.4em;
     display: flex;
+    flex-wrap: wrap;
     overflow: auto;
+    margin-top: -30px;
 }
 
 .text-section {
-    flex-basis: 100%;
-    min-width: 200px;
-    height: inherit;
-    margin: 0 30px 0 0;
+    flex: 1 1 200px;
+    /*flex-basis: 100%;*/
+    /*min-width: 200px;*/
+    /*height: inherit;*/
+    margin: 30px 30px 0 0;
 }
 
 .line {
