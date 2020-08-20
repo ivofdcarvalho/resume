@@ -40,5 +40,5 @@ As a personal preference the **Database** will be implemented using **MySQL**. T
 This project will be converted to **Docker** in order to be easy to deploy it without having to worry about the dependencies and environment.\
 Its using **Nginx** to self host the webpage.\
 To use the project change the '.env copy' file to '.env' and make the necessary changes to your use case.\
-The image **MailHog** is being used to handle the emails and to configure it we need to access http://localhost:8025/.\
+The image **MailHog** is being used to handle the emails and to configure it we need to access http://localhost:8025/  
 For more detail on how to use **MailHog** consult this [URL](https://phauer.com/2017/test-mail-server-php-docker-container/).
