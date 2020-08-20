@@ -1,7 +1,7 @@
 version: '3'
 services:
   webserver:
-    container_name: webserver
+    container_name: nginx
     image: nginx:latest
     restart: unless-stopped
     ports:
@@ -11,6 +11,11 @@ services:
       - ${ROOT}/webpage:/var/www
       - ${ROOT}/Config/nginx/logs:/var/log/nginx
       - ${ROOT}/Config/nginx/conf.d/:/etc/nginx/conf.d
+    links:
+      - php
+    networks:
+      - webserver-network
+
   php:
     container_name: php
     #image: php:7-fpm
@@ -18,6 +23,9 @@ services:
     restart: unless-stopped
     volumes:
       - ${ROOT}/webpage:/var/www
+    networks:
+      - webserver-network
+
   mailhog:
     container_name: mailhog
     image: mailhog/mailhog
@@ -25,3 +33,9 @@ services:
     ports:
       - 1025:1025
       - 8025:8025
+    networks:
+      - webserver-network
+
+networks:
+  webserver-network:
+    driver: bridge
