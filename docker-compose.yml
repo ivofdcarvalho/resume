@@ -36,6 +36,21 @@ services:
     networks:
       - webserver-network
 
+  sql:
+    container_name: sql
+    image: mysql
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: resume
+      MYSQL_ROOT_PASSWORD: your_sql_password
+    volumes:
+      - ${ROOT}/Config/sql/data:/var/lib/mysql
+    networks:
+      - webserver-network
+
 networks:
   webserver-network:
     driver: bridge

@@ -2,11 +2,11 @@ CREATE TABLE `user` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `full_name` varchar(255),
   `title` varchar(255),
-  `experience` int
+  `contact_info` int
 );
 
 CREATE TABLE `contact_info` (
-  `user_id` int,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `github` varchar(255),
   `linkedin` varchar(255),
   `website` varchar(255),
@@ -17,8 +17,9 @@ CREATE TABLE `contact_info` (
 );
 
 CREATE TABLE `about_me` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
-  `text` varchar(255)
+  `text` LONGTEXT
 );
 
 CREATE TABLE `experience` (
@@ -26,9 +27,9 @@ CREATE TABLE `experience` (
   `user_id` int,
   `title` varchar(255),
   `company` varchar(255),
-  `tasks` varchar(255),
-  `startdate` datetime,
-  `enddate` datetime
+  `tasks` LONGTEXT,
+  `startdate` varchar(255),
+  `enddate` varchar(255)
 );
 
 CREATE TABLE `education` (
@@ -36,8 +37,8 @@ CREATE TABLE `education` (
   `user_id` int,
   `title` varchar(255),
   `school` varchar(255),
-  `startdate` datetime,
-  `enddate` datetime
+  `startdate` varchar(255),
+  `enddate` varchar(255)
 );
 
 CREATE TABLE `skills` (
@@ -47,7 +48,7 @@ CREATE TABLE `skills` (
   `level` varchar(255)
 );
 
-ALTER TABLE `contact_info` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ALTER TABLE `user` ADD FOREIGN KEY (`contact_info`) REFERENCES `contact_info` (`id`);
 
 ALTER TABLE `about_me` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
