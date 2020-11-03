@@ -16,7 +16,7 @@ Implemented so far:
  - [x] **FrontEnd**
  - [x] **BackEnd**
  - [x] **Database**
- - [] **Docker**
+ - [ ] **Docker**
 
 ## FrontEnd
 ##### This section will be implemented with HTML, CSS and  JavaScript.
