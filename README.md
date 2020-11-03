@@ -14,9 +14,9 @@ The following technologies will be used:
  
 Implemented so far:
  - [x] **FrontEnd**
- - [ ] **BackEnd**
- - [ ] **Database**
- - [x] **Docker**
+ - [x] **BackEnd**
+ - [x] **Database**
+ - [] **Docker**
 
 ## FrontEnd
 ##### This section will be implemented with HTML, CSS and  JavaScript.
