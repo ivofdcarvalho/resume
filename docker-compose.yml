@@ -45,7 +45,7 @@ services:
       - 3306:3306
     environment:
       MYSQL_DATABASE: resume
-      MYSQL_ROOT_PASSWORD: your_sql_password
+      MYSQL_ROOT_PASSWORD: my_sql_password
     volumes:
       - ${ROOT}/Config/sql/data:/var/lib/mysql
     networks:

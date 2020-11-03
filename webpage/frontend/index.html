@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="src/htmlicon.png" rel="icon">
-    <title>Resume Ivo Carvalho</title>
+    <title>Resume {{userInfo[0][1]}}</title>
 </head>
 <body onload="autoSlide()">
 <header role="banner">
@@ -22,15 +22,15 @@
             <div class="top-menu">
                 <div class="menu-image"></div>
                 <div class="shortcuts">
-                    <a class="fa fa-github" href="https://github.com/ivofdcarvalho" id="github-link"
+                    <a class="fa fa-github" href={{userInfo[0][5]}} id="github-link"
                        target="_blank"></a>
-                    <a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/ivofdcarvalho/"
+                    <a class="fa fa-linkedin-square" href={{userInfo[0][6]}}
                        id="linkedin-link"
                        target="_blank"></a>
                 </div>
                 <div id="profileContainer"><img alt="profile" id="profilePicture" src="src/profile.jpg"></div>
                 <div class="name-menu">
-                    <h1 id="name-menu">Ivo Carvalho</h1>
+                    <h1 id="name-menu">{{userInfo[0][1]}}</h1>
                 </div>
             </div>
             <div class="links">
@@ -68,8 +68,8 @@
             <div class="background-image" id="first-image">
                 <div class="main-block" id="intro">
                     <div>
-                        <h1 id="name">Ivo Carvalho</h1>
-                        <h2 id="title">Software Engineer</h2>
+                        <h1 id="name">{{userInfo[0][1]}}</h1>
+                        <h2 id="title">{{userInfo[0][2]}}</h2>
                     </div>
                 </div>
                 <div class="main-block" id="info">
@@ -79,15 +79,7 @@
                             <div class="line"></div>
                             <div class="text-content">
                                 <div class="text-section">
-                                    <p>Software Engineer with 2+ years of experience in QA Automation in validation of
-                                        Web and
-                                        Mobile applications. Proficient
-                                        in using a wide range of automation tools as well as technical knowledge of
-                                        different
-                                        operating systems. Currently looking
-                                        for new challenges where I can learn new skills, work with a new team, and
-                                        develop a
-                                        career.</p>
+                                    <p>{{userInfo[0][14]}}</p>
                                 </div>
                             </div>
                         </div>
@@ -96,36 +88,14 @@
                             <h3 class="slide-title">Experience</h3>
                             <div class="line"></div>
                             <div class="text-content">
-                                <div class="text-section">
-                                    <h4>QA Automation Consultant</h4>
-                                    <h5>Noesis</h5>
-                                    <h6>August 2018 - Present</h6>
-                                    <p>Use of Java, Python, JUnit, TestNG, Selenium, Appium for the development and
-                                        maintenance
-                                        of automation
-                                        frameworks<br>Development of applications to automate business processes
-                                        utilizing C#,
-                                        WPF, SQL<br>Work with automation team to design and development automated test
-                                        suites
-                                        using Katalon, UFT, ALM and inhouse
-                                        frameworks
-                                    </p>
-                                </div>
-                                <div class="text-section">
-                                    <h4>Software Developer</h4>
-                                    <h5>8-Bit Forgers</h5>
-                                    <h6>September 2017 – May 2018</h6>
-                                    <p>Use of C# and Unity to develop character movement in the game Insurrection<br>Collaborate
-                                        with team to handle methods that manage character interactions with objects</p>
-                                </div>
-                                <div class="text-section">
-                                    <h4>Computer Technician (Part-Time)</h4>
-                                    <h5>Amélia F. Carvalho</h5>
-                                    <h6>January 2008 – May 2017</h6>
-                                    <p>Maintain computer systems and POS<br>Assist in sales of computer systems<br>Install
-                                        and
-                                        configure POS software for Restaurants, Bars, Barbers, and other companies</p>
-                                </div>
+                                {% for row in exp %}
+                                    <div class="text-section">
+                                        <h4>{{row[2]}}</h4>
+                                        <h5>{{row[3]}}</h5>
+                                        <h6>{{row[5]}} - {{row[6]}}</h6>
+                                        <p>{{row[4]}}</p>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
 
@@ -133,21 +103,13 @@
                             <h3 class="slide-title">Education</h3>
                             <div class="line"></div>
                             <div class="text-content">
-                                <div class="text-section">
-                                    <h4>General English – Advanced Level C1</h4>
-                                    <h5>Hello</h5>
-                                    <h6>May 2018 - October 2018</h6>
-                                </div>
-                                <div class="text-section">
-                                    <h4>Deep Learning Workshop with Tensorflow by Miguel Jaques</h4>
-                                    <h5>Lisbon.AI</h5>
-                                    <h6>October 2017</h6>
-                                </div>
-                                <div class="text-section">
-                                    <h4>Bachelor’s degree in Informatics Engineering</h4>
-                                    <h5>Faculty of Sciences and Technologies of the University of Coimbra</h5>
-                                    <h6>September 2010 – June 2018</h6>
-                                </div>
+                                {% for row in educ %}
+                                    <div class="text-section">
+                                        <h4>{{row[2]}}</h4>
+                                        <h5>{{row[3]}}</h5>
+                                        <h6>{{row[4]}} - {{row[5]}}</h6>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -168,126 +130,14 @@
                         <h3 class="slide-title">Skills</h3>
                         <div class="line"></div>
                         <div class="skill-container">
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Java</h4>
-                                    <h5>Advanced</h5>
+                            {% for row in skill %}
+                                <div class="skill-section">
+                                    <div>
+                                        <h4>{{row[2]}}</h4>
+                                        <h5>{{row[3]}}</h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Python</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>C#</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>SQL</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>C</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>HTML</h4>
-                                    <h5>Novice</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Selenium</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Appium</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>TestNG</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Junit</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Robot Framework</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Tensorflow</h4>
-                                    <h5>Novice</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>WPF</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Git</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Azure Devops</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Jira</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Katalon</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>UFT</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>ALM</h4>
-                                    <h5>Advanced</h5>
-                                </div>
-                            </div>
-                            <div class="skill-section">
-                                <div>
-                                    <h4>Postman</h4>
-                                    <h5>Intermediate</h5>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <div class="footer"><span>*Levels: 1 - Fundamental Awareness; 2 - Novice; 3 - Intermediate; 4 - Advanced; 5 - Expert</span>
                         </div>
@@ -300,23 +150,23 @@
                             <div class="line"></div>
                             <p class="paragraph-line">
                                 <b>Webpage</b>
-                                <a href="http://ivofdcarvalho.eu" target="_blank">ivofdcarvalho.eu</a>
+                                <a href="http://{{userInfo[0][7]}}" target="_blank">{{userInfo[0][7]}}</a>
                             </p>
                             <p class="paragraph-line">
                                 <b>Skype</b>
-                                <a href="skype:live:ivofdcarvalho_1?chat" target="_blank">live:ivofdcarvalho_1</a>
+                                <a href="skype:{{userInfo[0][8]}}?chat" target="_blank">{{userInfo[0][8]}}</a>
                             </p>
                             <p class="paragraph-line">
                                 <b>Email</b>
-                                <a href="mailto: ivofdcarvalho@gmail.com" target="_blank">ivofdcarvalho@gmail.com</a>
+                                <a href="mailto:{{userInfo[0][9]}}" target="_blank">{{userInfo[0][9]}}</a>
                             </p>
                             <p class="paragraph-line">
                                 <b>Phone</b>
-                                <span>(+351) 916 830 168</span>
+                                <span>{{userInfo[0][10]}}</span>
                             </p>
                             <p class="paragraph-line">
                                 <b>Address</b>
-                                <span>Coimbra, Portugal</span>
+                                <span>{{userInfo[0][11]}}</span>
                             </p>
                         </div>
                     </div>
